@@ -1,0 +1,26 @@
+# Exercise 2 - Build and Test local development environment
+
+# - Task 2: Set up Local Infrastructure
+# - Step 4 - Login to Azure using service principal
+az login --service-principal -u febdf31b-ec77-4a56-a76f-40fcd24d9926 -p nT18Q~RMRqEe-FuhF3Xmu-d5DmEYhd5BIFwGwcuI --tenant 338cad0a-9226-41c6-a09d-748ec1a0b210
+# - Step 6 - Build and Run PRODUCTS API
+dotnet user-secrets set "KeyVaultEndpoint" "https://contosotraderskv849130.vault.azure.net/"
+dotnet user-secrets list
+dotnet build 
+dotnet run
+# - Step 7 - Build and Run CARTS API
+dotnet user-secrets set "KeyVaultEndpoint" "https://contosotraderskv849130.vault.azure.net/"
+dotnet user-secrets list
+dotnet build 
+dotnet run
+# - Step 13 - Install NPM packages for UI
+npm install
+# - Step 15 - Run UI
+npm run start
+
+## TASK 3 -  Create the Project Repo
+github_cloudlabsuser_035@cloudlabsaiuser.com | xs4WBJakr%X%
+
+### Step 9 - Setup git credentials
+git config --global user.email "github_cloudlabsuser_035@cloudlabsaiuser.com"
+git config --global user.name "github_cloudlabsuser_035"
